@@ -31,3 +31,5 @@ const patch = (req, res) => {
 const destroy = (req, res) => {
     res.send(`Cancella un prodotto ${req.params.id}`);
 }
+
+module.exports = { index, show, store, put, patch, destroy }
