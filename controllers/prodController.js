@@ -37,14 +37,19 @@ const patch = (req, res) => {
 //destroy
 const destroy = (req, res) => {
     const prodId = Number(req.params.id)
-    const searchProd = products.find(product => product.prodId === prodId)
-    console.log(searchProd);
+    const searchProd = products.find(product => product.id === prodId)
+    //console.log(searchProd);
 
     if (!searchProd) {
         return res.status(404).json({
             error: "Product not found!"
         })
     }
+
+    products.splice(products.indexOf(searchProd), 1)
+    console.log(products);
+
+    res.sendStatus(204)
 
     //res.send(`Cancella un prodotto ${req.params.id}`);
 }
