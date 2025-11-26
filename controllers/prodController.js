@@ -1,6 +1,5 @@
 const products = require('./data/posts');
 const express = require('express');
-const router = express.Router();
 
 //index
 const index = (req, res) => {
@@ -11,12 +10,13 @@ const index = (req, res) => {
         );
     }*/
 
-    res.json(posts);
+    res.json(products);
 }
 
 //show
 const show = (req, res) => {
-    res.send(`Singolo prodotto ${req.params.id}`);
+    const singleProd = products.find(product => product.req.params.id === req.params.id);
+    res.json(singleProd);
 }
 
 //store
