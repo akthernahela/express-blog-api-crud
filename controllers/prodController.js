@@ -18,7 +18,16 @@ const store = (req, res) => {
 }
 
 //update
+const put = (req, res) => {
+    res.send(`Aggiorna il prodotto ${req.params.id}`);
+}
 
 //modify
+const patch = (req, res) => {
+    res.send(`Modifica il prodotto ${req.params.id}`);
+}
 
-//delete
+//destroy
+const destroy = (req, res) => {
+    res.send(`Cancella un prodotto ${req.params.id}`);
+}

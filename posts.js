@@ -12,18 +12,12 @@ router.get('/:id',);
 router.post('/',);
 
 //update
-router.put('/:id', (req, res) => {
-  res.send(`Aggiorna il prodotto ${req.params.id}`);
-});
+router.put('/:id',);
 
 //modify
-router.patch('/:id', (req, res) => {
-  res.send(`Modifica il prodotto ${req.params.id}`);
-});
+router.patch('/:id',);
 
 //destroy
-router.delete('/:id', (req, res) => {
-  res.send(`Cancella un prodotto ${req.params.id}`);
-});
+router.delete('/:id',);
 
 module.exports = router;
