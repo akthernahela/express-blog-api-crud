@@ -1,8 +1,15 @@
 const products = require('./data/posts');
+const express = require('express');
+const router = express.Router();
 
 //index
 const index = (req, res) => {
     let selectProduct = products;
+    if (req.query.tags) {
+        selectProduct = products.filter(
+            product => product.tags.includes(req.query.tags)
+        );
+    }
 
     res.json(posts);
 }
