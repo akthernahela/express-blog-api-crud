@@ -4,6 +4,8 @@ const products = require('./data/posts')
 
 //index
 router.get('/', (req, res) => {
+  let selectProduct = products;
+
   res.json(posts);
 });
 
