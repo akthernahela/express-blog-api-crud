@@ -3,11 +3,7 @@ const router = express.Router();
 
 
 //index
-router.get('/', (req, res) => {
-  let selectProduct = products;
-
-  res.json(posts);
-});
+router.get('/',);
 
 //show
 router.get('/:id', (req, res) => {
