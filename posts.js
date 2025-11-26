@@ -22,6 +22,11 @@ router.put('/:id', (req, res) => {
   res.send(`Aggiorna il prodotto ${req.params.id}`);
 });
 
+//modify
+router.patch('/:id', (req, res) => {
+  res.send(`Modifica il prodotto ${req.params.id}`);
+});
+
 //destroy
 router.delete('/:id', (req, res) => {
   res.send(`Cancella un prodotto ${req.params.id}`);
