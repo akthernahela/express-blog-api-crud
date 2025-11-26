@@ -39,6 +39,12 @@ const destroy = (req, res) => {
     const searchProd = products.find(product => product.req.params.id === req.params.id)
     console.log(searchProd);
 
+    if (!searchProd) {
+        return res.status(404).json({
+            error: "Product not found!"
+        })
+    }
+
     //res.send(`Cancella un prodotto ${req.params.id}`);
 }
 
