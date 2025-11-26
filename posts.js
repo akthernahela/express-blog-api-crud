@@ -3,7 +3,7 @@ const router = express.Router();
 const products = require('./data/posts')
 
 router.get('/', (req, res) => {
-  res.send(`Lista dei prodotti`);
+  res.json(posts);
 });
 
 router.get('/:id', (req, res) => {
