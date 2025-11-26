@@ -6,14 +6,10 @@ const router = express.Router();
 router.get('/',);
 
 //show
-router.get('/:id', (req, res) => {
-  res.send(`Singolo prodotto ${req.params.id}`);
-});
+router.get('/:id',);
 
 //store
-router.post('/', (req, res) => {
-  res.send('Aggiungi un nuovo prodotto');
-});
+router.post('/',);
 
 //update
 router.put('/:id', (req, res) => {
