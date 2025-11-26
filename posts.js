@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const products = require('./data/posts')
 
 router.get('/', (req, res) => {
   res.send(`Lista dei prodotti`);
