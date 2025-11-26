@@ -36,7 +36,10 @@ const patch = (req, res) => {
 
 //destroy
 const destroy = (req, res) => {
-    res.send(`Cancella un prodotto ${req.params.id}`);
+    const searchProd = products.find(product => product.req.params.id === req.params.id)
+    console.log(searchProd);
+
+    //res.send(`Cancella un prodotto ${req.params.id}`);
 }
 
 module.exports = { index, show, store, put, patch, destroy }
