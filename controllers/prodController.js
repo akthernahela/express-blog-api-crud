@@ -36,7 +36,8 @@ const patch = (req, res) => {
 
 //destroy
 const destroy = (req, res) => {
-    const searchProd = products.find(product => product.req.params.id === req.params.id)
+    const prodId = Number(req.params.id)
+    const searchProd = products.find(product => product.prodId === prodId)
     console.log(searchProd);
 
     if (!searchProd) {
