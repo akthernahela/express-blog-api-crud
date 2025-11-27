@@ -32,7 +32,7 @@ const store = (req, res) => {
     }
     products.push(newProd);
     console.log(products);
-
+    res.status(201);
     res.json(newProd);
 }
 
