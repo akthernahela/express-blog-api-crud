@@ -47,7 +47,7 @@ const put = (req, res) => {
         })
     }
 
-    prod.name = req.body.title;
+    prod.title = req.body.title;
     prod.content = req.body.content;
     prod.image = req.body.image;
     prod.tags = req.body.tags;
