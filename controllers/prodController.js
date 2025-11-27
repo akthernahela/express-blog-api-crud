@@ -31,6 +31,7 @@ const store = (req, res) => {
         tags: req.body.tags
     }
     products.push(newProd);
+    console.log(products);
 
     res.send('Aggiungi un nuovo prodotto');
 }
