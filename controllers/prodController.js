@@ -15,7 +15,8 @@ const index = (req, res) => {
 
 //show
 const show = (req, res) => {
-    const singleProd = products.find(product => product.req.params.id === req.params.id);
+    const prodId = Number(req.params.id);
+    const singleProd = products.find(product => product.req.params.id === prodId);
     res.json(singleProd);
 }
 
