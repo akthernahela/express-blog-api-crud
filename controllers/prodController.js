@@ -39,8 +39,15 @@ const store = (req, res) => {
 //update
 const put = (req, res) => {
     const prodId = Number(req.params.id)
-    const searchProd = products.find(product => product.id === prodId)
-    res.send(`Aggiorna il prodotto ${req.params.id}`);
+    const prod = products.find(product => product.id === prodId);
+    if (!prod) {
+        res.status(404);
+        return res.json({
+            error: "Not Found",
+            message: "Prodotto non trovato"
+        })
+    }
+    res.json(prod);
 }
 
 //modify
