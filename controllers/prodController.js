@@ -16,7 +16,7 @@ const index = (req, res) => {
 //show
 const show = (req, res) => {
     const prodId = Number(req.params.id);
-    const singleProd = products.find(product => product.req.params.id === prodId);
+    const singleProd = products.find(product => product.id === prodId);
     res.json(singleProd);
 }
 
@@ -33,7 +33,7 @@ const store = (req, res) => {
     }
     products.push(newProd);
     console.log(products);
-    res.status(201).res.json(newProd);
+    res.status(201).json(newProd);
 }
 
 //update
