@@ -38,6 +38,8 @@ const store = (req, res) => {
 
 //update
 const put = (req, res) => {
+    const prodId = Number(req.params.id)
+    const searchProd = products.find(product => product.id === prodId)
     res.send(`Aggiorna il prodotto ${req.params.id}`);
 }
 
