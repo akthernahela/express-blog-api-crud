@@ -47,6 +47,14 @@ const put = (req, res) => {
             message: "Prodotto non trovato"
         })
     }
+
+    prod.name = req.body.title;
+    prod.content = req.body.content;
+    prod.image = req.body.image;
+    prod.tags = req.body.tags;
+
+    console.log(products);
+
     res.json(prod);
 }
 
