@@ -22,7 +22,7 @@ const show = (req, res) => {
 //store
 const store = (req, res) => {
     //console.log(req.body);
-    const newId = products[products.lenght - 1].id + 1;
+    const newId = products[products.length - 1].id + 1;
     const newProd = {
         id: newId,
         title: req.body.title,
