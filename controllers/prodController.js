@@ -33,7 +33,7 @@ const store = (req, res) => {
     products.push(newProd);
     console.log(products);
 
-    res.send('Aggiungi un nuovo prodotto');
+    res.json(newProd);
 }
 
 //update
