@@ -30,6 +30,8 @@ const store = (req, res) => {
         image: req.body.image,
         tags: req.body.tags
     }
+    products.push(newProd);
+
     res.send('Aggiungi un nuovo prodotto');
 }
 
