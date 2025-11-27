@@ -23,6 +23,13 @@ const show = (req, res) => {
 const store = (req, res) => {
     //console.log(req.body);
     const newId = products[products.lenght - 1].id + 1;
+    const newProd = {
+        id: newId,
+        title: req.body.title,
+        content: req.body.content,
+        image: req.body.image,
+        tags: req.body.tags
+    }
     res.send('Aggiungi un nuovo prodotto');
 }
 
