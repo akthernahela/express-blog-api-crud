@@ -1,4 +1,4 @@
-const products = require('./data/posts');
+const products = require('../data/products');
 const express = require('express');
 
 //index
