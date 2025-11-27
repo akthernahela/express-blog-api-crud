@@ -21,8 +21,8 @@ const show = (req, res) => {
 
 //store
 const store = (req, res) => {
-    console.log(req.body);
-
+    //console.log(req.body);
+    const newId = products[products.lenght - 1].id + 1;
     res.send('Aggiungi un nuovo prodotto');
 }
 
