@@ -1,5 +1,4 @@
 const products = require('../data/products');
-const express = require('express');
 
 //index
 const index = (req, res) => {
