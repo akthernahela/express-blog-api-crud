@@ -1,3 +1,6 @@
-function serverDown(err, req, res, next) { }
+function serverDown(err, req, res, next) {
+    console.log(err.message);
+
+}
 
 module.exports = serverDown
