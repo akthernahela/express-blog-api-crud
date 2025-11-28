@@ -1,7 +1,8 @@
 function notFound(req, res, next) {
     res.status(404)
     res.json({
-        message: "Risorsa non trovata."
+        message: "Risorsa non trovata.",
+        error: true
     });
 };
 module.exports = notFound;
