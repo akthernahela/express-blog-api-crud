@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const PORT = 3000
 const productsRouter = require('./roots/posts')
+const notFound = require('./middlewares/notFound')
 
 app.use(express.static('public'));
 app.listen(PORT, () => {
@@ -14,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/posts', productsRouter);
-
+app.use(notFound);
 /*
 app.get('/posts', (req, res) => {
     res.send(`Lista dei prodotti`);
